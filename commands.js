@@ -112,6 +112,21 @@ var cmds = {
         bot.createMessage(msg.channel.id, getCommandsHelp(suffix))
       }
     }
+  },
+  hi: {
+    name: 'Hi',
+    help: 'Say hello to the bot, he might answer you!',
+    usage: '<hi>',
+    lvl: 0,
+    fn: function(bot, msg, suffix) {
+      if (!suffix) {
+        var random = Math.floor((Math.random() * 5) + 1)
+        if (random == 1) {bot.createMessage(msg.channel.id, 'Oh, hi! I did not see you there! I am Freezy!')}
+        if (random == 2) {bot.createMessage(msg.channel.id, 'Well hello there little fellow! Do you want some candy?')}
+        if (random == 3) {bot.createMessage(msg.channel.id, 'Hmm... You look suspicious... I do not think it is smart for me to talk to you!')}
+        if (random == 4) {bot.createMessage(msg.channel.id, 'My creator said i may not talk to strangers! I am sorry...')}
+      }
+    }
   }
 }
 
